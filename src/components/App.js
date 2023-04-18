@@ -14,6 +14,7 @@ import AddPlacePopup from './AddPlacePopup';
 import api from '../utils/Api';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import WrapperForLoader from '../Loader/WrapperForLoader';
+import Register from './Register.js/Register';
 
 function App() {
 	//использую хуки, чтобы задать начальное состояние(false)
@@ -162,15 +163,18 @@ function App() {
 					<>
 						{' '}
 						<Header></Header>
-						<Main
-							openProfileEdit={handleEditProfileClick}
-							addButtonCard={handleAddPlaceClick}
-							openUserAvatar={handleEditAvatarClick}
-							openDeleteConfirm={handleConfirmDeletePopup}
-							openCard={handleOpenCardClick}
-							cardLike={handleCardLike}
-							cards={cards}
-						></Main>
+						<Register></Register>
+						{/*// на время закомментим Main*/}
+						{/*<Main*/}
+						{/*	openProfileEdit={handleEditProfileClick}*/}
+						{/*	addButtonCard={handleAddPlaceClick}*/}
+						{/*	openUserAvatar={handleEditAvatarClick}*/}
+						{/*	openDeleteConfirm={handleConfirmDeletePopup}*/}
+						{/*	openCard={handleOpenCardClick}*/}
+						{/*	cardLike={handleCardLike}*/}
+						{/*	cards={cards}*/}
+						{/*></Main>*/}
+						{/*// на время закомментим Main*/}
 						<Footer></Footer>
 					</>
 				)}
