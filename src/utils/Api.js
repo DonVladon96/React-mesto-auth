@@ -1,3 +1,5 @@
+import apiConfig from './apiConfig';
+
 class Api {
 	constructor({ baseUrl, headers }) {
 		this._baseUrl = baseUrl;
@@ -143,12 +145,6 @@ class Api {
 	}
 }
 
-const api = new Api({
-	baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-60/',
-	headers: {
-		authorization: '8449ac58-7a24-4246-806a-a59752bbc1d5',
-		'Content-Type': 'application/json'
-	}
-});
+const api = new Api(apiConfig);
 
 export default api;

@@ -4,6 +4,12 @@
 @import url(./blocks/body-container/body-container.css);
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__menu/header__menu.css);
+@import url(./blocks/header/__menu-button/header__menu-button.css);
+@import url(./blocks/header/__menu-button/_active/header__menu-button_active.css);
+@import url(./blocks/header/__menu/_active/header__menu_active.css);
+@import url(./blocks/header/__menu-li/header__menu-li.css);
+@import url(./blocks/header/__menu-item/header__menu-item.css);
 @import url(./blocks/main-content/main-content.css);
 @import url(./blocks/profile/profile.css);
 @import url(./blocks/profile/__avatar/profile__avatar.css);
@@ -50,3 +56,16 @@
 @import url(./blocks/popup/__image-open/popup_image-open.css);
 @import url(./blocks/element/__button-trash/_visible/element__button-trash_visible.css);
 @import url(blocks/Loader-css/Loader.css);
+@import url(blocks/initial-window/initial-window.css);
+@import url(blocks/initial-window/__title/initial-window__title.css);
+@import url(blocks/initial-window/__form/initial-window__form.css);
+@import url(blocks/initial-window/__input/initial-window__input.css);
+@import url(blocks/initial-window/__submit-button/initial-window__submit-button.css);
+@import url(blocks/initial-window/__span-text/initial-window__span-text.css);
+@import url(./blocks/popup/__figure/popup__figure.css);
+@import url(./blocks/popup/__information-message/popup__information-message.css);
+@import url(./blocks/popup/__information-message/_success/popup__information-message_success.css);
+@import url(./blocks/popup/__information-message/_fail/popup__information-message_fail.css);
+
+
+
