@@ -32,10 +32,9 @@ function Register({ handleShowInfoMessage }) {
 				navigate('/sign-in');
 			})
 			.catch((error) => {
-				const text =
-					error.message || 'Что-то пошло не так! Попробуйте еще раз.';
+				const text = 'Что-то пошло не так! Попробуйте еще раз.';
 				handleShowInfoMessage({
-					text: 'Что-то пошло не так! Попробуйте еще раз.',
+					text: text,
 					isSuccess: false
 				});
 			});

@@ -32,8 +32,7 @@ function Login({ handleShowInfoMessage, onLogin }) {
 				navigate('/');
 			})
 			.catch((error) => {
-				const text =
-					error.message || 'Что-то пошло не так! Попробуйте еще раз.';
+				const text = 'Что-то пошло не так! Попробуйте еще раз.';
 				handleShowInfoMessage({
 					text: text,
 					isSuccess: false

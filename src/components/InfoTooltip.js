@@ -1,6 +1,3 @@
-// import iconSuccess from '../../images/reg-success.svg';
-// import iconFailure from '../../images/reg-fail.svg';
-
 import React from 'react';
 
 function InfoTooltip(
