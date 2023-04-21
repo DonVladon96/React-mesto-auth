@@ -196,7 +196,6 @@ function App(props) {
 		}
 	}
 
-
 	return (
 		<CurrentUserContext.Provider value={currentUser}>
 			<div className='main-page'>
@@ -204,18 +203,24 @@ function App(props) {
 					<Route
 						path='/'
 						element={
+
 							<ProtectedRoute isLoggiedIn={isLoggedIn}>
-								<Main
-									openProfileEdit={handleEditProfileClick}
-									addButtonCard={handleAddPlaceClick}
-									openUserAvatar={handleEditAvatarClick}
-									openDeleteConfirm={handleConfirmDeletePopup}
-									openCard={handleOpenCardClick}
-									cardLike={handleCardLike}
-									cards={cards}
-									email={email}
-									onLogout={handleLogout}
-								></Main>
+								{isLoading ? (
+										<WrapperForLoader>
+											<Loader></Loader>
+										</WrapperForLoader>
+									) :
+									<Main
+										openProfileEdit={handleEditProfileClick}
+										addButtonCard={handleAddPlaceClick}
+										openUserAvatar={handleEditAvatarClick}
+										openDeleteConfirm={handleConfirmDeletePopup}
+										openCard={handleOpenCardClick}
+										cardLike={handleCardLike}
+										cards={cards}
+										email={email}
+										onLogout={handleLogout}
+									></Main>}
 							</ProtectedRoute>
 						}
 					></Route>
@@ -240,24 +245,8 @@ function App(props) {
 							isLoggedIn ? <Navigate to='/' /> : <Navigate to='/sign-in' />
 						}
 					></Route>
-
-					{/*Спиннер с отображением всего*/}
-					{/*{isLoading ? (*/}
-					{/*	<WrapperForLoader>*/}
-					{/*		<Loader></Loader>*/}
-					{/*	</WrapperForLoader>*/}
-					{/*) : (*/}
-					{/*	<>*/}
-					{/*		{' '}*/}
-					{/*		<Header></Header>*/}
-					{/*		<Register></Register>*/}
-					{/*		<Footer></Footer>*/}
-					{/*	</>*/}
-					{/*)}*/}
-					{/*Спиннер с отображением всего*/}
 				</Routes>
 				<Footer />
-
 				<EditAvatarPopup
 					isOpen={isEditAvatarPopupOpen}
 					isClosed={closeAllPopups}
