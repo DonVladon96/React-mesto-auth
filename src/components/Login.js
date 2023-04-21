@@ -72,13 +72,14 @@ function Login({ handleShowInfoMessage, onLogin }) {
 						<input
 							type='password'
 							className='initial-window__input'
+							name='password'
 							placeholder='password'
 							value={inputs.password}
 							onChange={handleChangeValue}
 							required
 						/>
 						<button type='submit' className='initial-window__submit-button'>
-							Регистрация
+							Вход
 						</button>
 					</form>
 				</div>

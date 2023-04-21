@@ -66,6 +66,6 @@
 @import url(./blocks/popup/__information-message/popup__information-message.css);
 @import url(./blocks/popup/__information-message/_success/popup__information-message_success.css);
 @import url(./blocks/popup/__information-message/_fail/popup__information-message_fail.css);
-
+@import url(./blocks/popup/__container/_background/popup__container_background.css);
 
 

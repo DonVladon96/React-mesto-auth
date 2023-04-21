@@ -196,6 +196,7 @@ function App(props) {
 		}
 	}
 
+
 	return (
 		<CurrentUserContext.Provider value={currentUser}>
 			<div className='main-page'>
@@ -284,15 +285,7 @@ function App(props) {
 				<PopupWithVerification
 					isOpen={isConfirmDeletePopup}
 					isClosed={closeAllPopups}
-					onSubmit={
-						isLoading ? (
-							<WrapperForLoader>
-								<Loader></Loader>
-							</WrapperForLoader>
-						) : (
-							handleCardDelete
-						)
-					}
+					onSubmit={handleCardDelete}
 				></PopupWithVerification>{' '}
 				{/*<InfoToolTip*/}
 				{/*	message={isInfoMessage}*/}

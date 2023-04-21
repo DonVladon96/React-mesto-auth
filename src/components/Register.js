@@ -35,7 +35,7 @@ function Register({ handleShowInfoMessage }) {
 				const text =
 					error.message || 'Что-то пошло не так! Попробуйте еще раз.';
 				handleShowInfoMessage({
-					text: text,
+					text: 'Что-то пошло не так! Попробуйте еще раз.',
 					isSuccess: false
 				});
 			});
@@ -74,6 +74,7 @@ function Register({ handleShowInfoMessage }) {
 							type='password'
 							className='initial-window__input'
 							placeholder='Password'
+							name='password'
 							value={inputs.password}
 							onChange={handleChangeValue}
 							required
