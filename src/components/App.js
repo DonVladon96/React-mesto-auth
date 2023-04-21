@@ -44,28 +44,43 @@ function App(props) {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		Promise.all([api.getUserInfo(), api.getInitialCards()])
-			.then((data) => {
-				const [userData, cardsData] = data;
+		if (isLoggedIn) {
+			setIsLoading(true);
 
-				setCurrentUser(userData);
+			Promise.all([api.getUserInfo(), api.getInitialCards()])
+				.then((data) => {
+					const [userData, cardsData] = data;
 
-				setCard(cardsData);
-				setIsLoading(false);
-			})
-			.catch((err) => {
-				console.log(`Ошибка: ${err}`);
-			});
-	}, []);
+					setCurrentUser(userData);
+
+					setCard(cardsData);
+					setIsLoading(false);
+				})
+				.catch((err) => {
+					console.log(`Ошибка: ${err}`);
+				})
+				.finally(() => {
+					setIsLoading(false);
+				});
+		}
+	}, [isLoggedIn]);
 
 	useEffect(() => {
 		const token = localStorage.getItem('token');
 		if (token) {
-			auth.checkToken(token).then((res) => {
-				setEmail(res.data.email);
-				setIsLoggedIn(true);
-				navigate('/');
-			});
+			auth
+				.checkToken(token)
+				.then((res) => {
+					setEmail(res.data.email);
+					setIsLoggedIn(true);
+					navigate('/');
+				})
+				.catch((err) => {
+					console.log(
+						`Ошибка в процессе проверки токена пользователя и получения личных данных: ${err}`
+					);
+				})
+				.finally(setIsLoading(true));
 		}
 	}, [navigate]);
 
@@ -203,13 +218,12 @@ function App(props) {
 					<Route
 						path='/'
 						element={
-
 							<ProtectedRoute isLoggiedIn={isLoggedIn}>
 								{isLoading ? (
-										<WrapperForLoader>
-											<Loader></Loader>
-										</WrapperForLoader>
-									) :
+									<WrapperForLoader>
+										<Loader></Loader>
+									</WrapperForLoader>
+								) : (
 									<Main
 										openProfileEdit={handleEditProfileClick}
 										addButtonCard={handleAddPlaceClick}
@@ -220,7 +234,8 @@ function App(props) {
 										cards={cards}
 										email={email}
 										onLogout={handleLogout}
-									></Main>}
+									></Main>
+								)}
 							</ProtectedRoute>
 						}
 					></Route>

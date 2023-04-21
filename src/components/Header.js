@@ -2,12 +2,6 @@ import { useState } from 'react';
 import logo from '../images/logo.svg';
 
 function Header({ isWrapperForHeader, children }) {
-	const [isMenuOpened, setIsMenuOpened] = useState(false);
-
-	function handleOpenMenu() {
-		setIsMenuOpened((state) => !state);
-	}
-
 	return (
 		<header
 			className={'header section_size_narrow' + (isWrapperForHeader ? '' : '')}
@@ -17,20 +11,16 @@ function Header({ isWrapperForHeader, children }) {
 			{isWrapperForHeader && (
 				<button
 					type='button'
-					className={
-						'header__menu-button' +
-						(isMenuOpened ? 'header__menu-button_active' : '')
-					}
+					className='header__menu-button'
 					aria-label='Menu'
-					onClick={handleOpenMenu}
 				></button>
 			)}
 
 			{children && (
 				<nav
-					className={
-						'header__menu' + (isMenuOpened ? 'header__menu_active' : '')
-					}
+					className=
+						'header__menu'
+
 				>
 					<ul className='header__menu-li'>
 						{(children.length > 1 ? children : [children]).map((item, pos) => (
