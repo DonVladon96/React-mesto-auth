@@ -62,6 +62,7 @@
 @import url(blocks/initial-window/__input/initial-window__input.css);
 @import url(blocks/initial-window/__submit-button/initial-window__submit-button.css);
 @import url(blocks/initial-window/__span-text/initial-window__span-text.css);
+@import url(./blocks/initial-window/__link/initial-window__link.css);
 @import url(./blocks/popup/__figure/popup__figure.css);
 @import url(./blocks/popup/__information-message/popup__information-message.css);
 @import url(./blocks/popup/__information-message/_success/popup__information-message_success.css);
