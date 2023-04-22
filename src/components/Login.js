@@ -3,8 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import Header from './Header';
 import auth from '../utils/auth';
 
-//сюда импортировать auth.js
-
 function Login({ handleShowInfoMessage, onLogin }) {
 	const startValues = {
 		email: '',
