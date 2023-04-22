@@ -227,6 +227,26 @@ function App(props) {
 		}
 	}
 
+	function handleRegister(inputs, restartForm) {
+		auth
+			.register(inputs)
+			.then((res) => {
+				handleShowInfoMessage({
+					text: 'Вы успешно зарегистрировались!',
+					isSuccess: true
+				});
+				restartForm();
+				navigate('/sign-in');
+			})
+			.catch((error) => {
+				const text = 'Что-то пошло не так! Попробуйте еще раз.';
+				handleShowInfoMessage({
+					text: text,
+					isSuccess: false
+				});
+			});
+	}
+
 	return (
 		<CurrentUserContext.Provider value={currentUser}>
 			<div className='main-page'>
@@ -258,7 +278,8 @@ function App(props) {
 
 					<Route
 						path='/sign-up'
-						element={<Register handleShowInfoMessage={handleShowInfoMessage} />}
+						element={<Register handleShowInfoMessage={handleShowInfoMessage}
+															 onRegister={handleRegister} />}
 					></Route>
 					<Route
 						path='/sign-in'

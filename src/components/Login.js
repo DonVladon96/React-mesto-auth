@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import auth from '../utils/auth';
 
@@ -11,7 +11,6 @@ function Login({ handleShowInfoMessage, onLogin }) {
 
 	const [inputs, setInputs] = useState(startValues);
 
-	const navigate = useNavigate();
 
 	function handleChangeValue(evt) {
 		const value = evt.target.value;
@@ -41,7 +40,6 @@ function Login({ handleShowInfoMessage, onLogin }) {
 					<form
 						className='initial-window__form'
 						onSubmit={handleSubmitValue}
-						noValidate
 					>
 						<input
 							type='email'

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import auth from '../utils/auth';
 
-function Register({ handleShowInfoMessage }) {
+function Register({ handleShowInfoMessage, onRegister }) {
 	const startValues = {
 		email: '',
 		password: ''
@@ -11,7 +11,6 @@ function Register({ handleShowInfoMessage }) {
 
 	const [inputs, setInputs] = useState(startValues);
 
-	const navigate = useNavigate();
 
 	function handleChangeValue(evt) {
 		const value = evt.target.value;
@@ -21,23 +20,7 @@ function Register({ handleShowInfoMessage }) {
 
 	function handleSubmitValue(evt) {
 		evt.preventDefault();
-		auth
-			.register(inputs)
-			.then((res) => {
-				handleShowInfoMessage({
-					text: 'Вы успешно зарегистрировались!',
-					isSuccess: true
-				});
-				restartForm();
-				navigate('/sign-in');
-			})
-			.catch((error) => {
-				const text = 'Что-то пошло не так! Попробуйте еще раз.';
-				handleShowInfoMessage({
-					text: text,
-					isSuccess: false
-				});
-			});
+		onRegister(inputs, restartForm);
 	}
 
 	function restartForm() {
@@ -58,7 +41,6 @@ function Register({ handleShowInfoMessage }) {
 					<form
 						className='initial-window__form'
 						onSubmit={handleSubmitValue}
-						noValidate
 					>
 						<input
 							type='email'
