@@ -189,8 +189,24 @@ function App(props) {
 		setSelectedCard(cardsData);
 	}
 
-	function handleLogin() {
-		setIsLoggedIn(true);
+	function handleLogin(inputs, restartForm) {
+
+
+		auth
+			.authorize(inputs)
+			.then((res) => {
+				if (res.token) localStorage.setItem('token', res.token);
+				restartForm();
+				navigate('/');
+				setIsLoggedIn(true);
+			})
+			.catch((error) => {
+				const text = 'Что-то пошло не так! Попробуйте еще раз.';
+				handleShowInfoMessage({
+					text: text,
+					isSuccess: false
+				});
+			});
 	}
 
 	function handleLogout() {
