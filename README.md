@@ -13,12 +13,6 @@
       <li><a href="#project-description">Описание проекта</a></li>
       <li><a href="#technologies">Стек технологий</a></li>
       <li><a href="#installation">Установка и запуск приложения в локальном репозитории, эксплуатация</a></li>
-      <li><a href="#establishing">Процесс создания</a></li>
-      <ul>
-        <li><a href="#tasks-and-problems">Основные задачи, проблемы и их решение</a></li>
-      </ul>
-      <li><a href="#functionality">Функционал</a></li>
-      <li><a href="#enhancement">Планы по улучшению</a></li>
     </ol>
   </details>
 </a>
