@@ -98,10 +98,6 @@ https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1
 
 </details>
 
-<details>
-  <summary><b><i>Валидация форм</i></b></summary>
-
-</details>
 
 <details>
   <summary><b><i><b><i>Окно предварительной загрузки страницы</i></b></i></b></summary>
