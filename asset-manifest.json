@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/DonVladon96/react-mesto-auth.git%20/static/css/main.8886c7bc.css",
+    "main.js": "/DonVladon96/react-mesto-auth.git%20/static/js/main.330ca833.js",
+    "static/js/787.2df4b1c8.chunk.js": "/DonVladon96/react-mesto-auth.git%20/static/js/787.2df4b1c8.chunk.js",
+    "static/media/Inter-Medium.woff": "/DonVladon96/react-mesto-auth.git%20/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff": "/DonVladon96/react-mesto-auth.git%20/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff": "/DonVladon96/react-mesto-auth.git%20/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2": "/DonVladon96/react-mesto-auth.git%20/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2": "/DonVladon96/react-mesto-auth.git%20/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2": "/DonVladon96/react-mesto-auth.git%20/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/logo.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/logo.9acae8482e5b5b17160c46db4e2718a2.svg",
+    "index.html": "/DonVladon96/react-mesto-auth.git%20/index.html",
+    "static/media/button-like.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/button-like.0e390048c288271ab07f.svg",
+    "static/media/reg-fail.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/reg-fail.d4ce2a261b68c6da973d.svg",
+    "static/media/Trash.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/Trash.ce3b64935accf9b8212e.svg",
+    "static/media/reg-success.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/reg-success.a9eb6caf1da3ff48b215.svg",
+    "static/media/like_active.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/like_active.35948469632d0421d697.svg",
+    "static/media/Close.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/Close.973e77374abfb705de40.svg",
+    "static/media/icon__burger.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/icon__burger.ccf7020248ca1ffd1496.svg",
+    "static/media/Edit-Button.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/Edit-Button.af236f6cf67005f1d7aa.svg",
+    "static/media/addButton.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/addButton.bed8c136e13907f5eefb.svg",
+    "static/media/icon__burger_active.svg": "/DonVladon96/react-mesto-auth.git%20/static/media/icon__burger_active.622e8cdafa2222aa7c54.svg",
+    "main.8886c7bc.css.map": "/DonVladon96/react-mesto-auth.git%20/static/css/main.8886c7bc.css.map",
+    "main.330ca833.js.map": "/DonVladon96/react-mesto-auth.git%20/static/js/main.330ca833.js.map",
+    "787.2df4b1c8.chunk.js.map": "/DonVladon96/react-mesto-auth.git%20/static/js/787.2df4b1c8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8886c7bc.css",
+    "static/js/main.330ca833.js"
+  ]
+}
