@@ -32,7 +32,7 @@ https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1
 
 Ссылка на проект: https://github.com/DonVladon96/react-mesto-auth </h4>
 
-<i>* - проект прошел код-ревью</i>
+<i>* - проект прошел код-ревью сотрудниками ЯндексПрактикум</i>
 
 <div align="right">(<a href="#summary">к оглавлению</a>)</div>
 
@@ -104,5 +104,4 @@ https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1
 
 </details>
 
-</details>
 
